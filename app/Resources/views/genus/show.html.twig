@@ -5,8 +5,6 @@
 {% block body %}
     <h2 class="genus-name">{{ name }}</h2>
 
-    <a href="{{ path('genus_show_notes', {'genusName': name}) }}">Json Notes</a>
-
     <div class="sea-creature-container">
         <div class="genus-photo"></div>
         <div class="genus-details">
@@ -14,7 +12,7 @@
                 <dt>Subfamily:</dt>
                 <dd>Octopodinae</dd>
                 <dt>Known Species:</dt>
-                <dd>289</dd>
+                <dd>{{ '289099999'|number_format }}</dd>
                 <dt>Fun Fact:</dt>
                 <dd>{{ funFacts|raw }}</dd>
             </dl>
