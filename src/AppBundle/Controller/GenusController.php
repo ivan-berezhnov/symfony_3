@@ -3,15 +3,14 @@
 namespace AppBundle\Controller;
 
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class GenusController extends Controller
 {
   /**
-   * @Route("/genus/{genusName}")
+   * @Route(path="/genus/{genusName}")
    */
   public function showAction($genusName)
   {
@@ -21,8 +20,7 @@ class GenusController extends Controller
   }
 
   /**
-   * @Route("/genus/{genusName}/notes", name="genus_show_notes")
-   * @Method("GET")
+   * @Route(path="/genus/{genusName}/notes", methods={"GET"}, name="genus_show_notes")
    */
   public function getNotesAction($genusName) {
     $notes = [
