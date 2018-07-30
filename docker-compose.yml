@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mariadb
+    container_name: symfony3_vm_sql
+    networks:
+      - symfony3_master
+    ports:
+      - '3308:3306'
+    volumes:
+      - ./databases:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=symfony
+      - MYSQL_DATABASE=symfony
+      - MYSQL_USER=symfony
+      - MYSQL_PASSWORD=symfony
+networks:
+  symfony3_master:
+    driver: bridge
