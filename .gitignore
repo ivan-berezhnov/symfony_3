@@ -18,3 +18,4 @@ code-symfony3/*
 /vendor/
 /web/bundles/
 .scannerwork/*
+/databases/
